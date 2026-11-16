@@ -1,0 +1,140 @@
+code,name,credits,major
+MTH101,Giải tích 1,3,
+PHY101,Vật lý 1,3,
+MTH103,Đại số tuyến tính,3,
+CHE101,Hóa đại cương,3,
+POL101,Triết học Mác - Lênin,3,
+LAW101,Pháp luật đại cương,2,
+CO1005,Nhập môn điện toán,3,
+CO1027,Kỹ thuật lập trình,3,
+MTH102,Giải tích 2,3,
+PHY201,Vật lý 2,3,
+PHY102,Thí nghiệm Vật lý 1,1,
+MTH203,Xác suất thống kê,3,
+CO1007,Cấu trúc rời rạc,3,
+CO1023,Hệ thống số,3,
+ENG102,Anh văn 2,3,
+MTH202,Phương pháp tính,3,
+CO2007,Kiến trúc máy tính,3,
+CO2011,Mô hình hóa,3,
+CO2003,Cấu trúc dữ liệu và giải thuật,3,
+CO2004,Cơ sở dữ liệu,3,
+POL202,Kinh tế chính trị,2,
+NET201,Mạng máy tính,3,
+CO2017,Hệ điều hành,3,
+CO2039,Lập trình nâng cao,3,
+CO3010,Công nghệ phần mềm,3,
+POL203,Chủ nghĩa xã hội khoa học,2,
+POL204,Lịch sử Đảng Cộng sản Việt Nam,2,
+POL205,Tư tưởng Hồ Chí Minh,2,
+WEB201,Lập trình web,3,
+AI301,Trí tuệ nhân tạo,3,Kỹ thuật dữ liệu
+SEC301,An toàn thông tin,3,An toàn thông tin
+GIS301,Lập trình GIS,3,Hệ thống thông tin
+OS301,Hệ điều hành nâng cao,3,Khoa học máy tính
+NET301,Quản trị mạng,3,Công nghệ thông tin
+DB301,Cơ sở dữ liệu nâng cao,3,Hệ thống thông tin
+SE301,Công nghệ phần mềm nâng cao,3,Kỹ thuật phần mềm
+WEB302,Phát triển ứng dụng Web,3,Kỹ thuật phần mềm
+ML302,Học máy,3,Kỹ thuật dữ liệu
+BIG302,Công nghệ dữ liệu lớn,3,Kỹ thuật dữ liệu
+NLP302,Xử lý ngôn ngữ tự nhiên,3,Kỹ thuật dữ liệu
+CLOUD302,Điện toán đám mây,3,Công nghệ thông tin
+APP302,Lập trình di động,3,Kỹ thuật phần mềm
+QA302,Đảm bảo chất lượng và kiểm thử phần mềm,3,Kỹ thuật phần mềm
+IOT401,Hệ thống nhúng và IoT,3,Công nghệ thông tin
+VLSI401,Thiết kế vi mạch số,3,Khoa học máy tính
+IMG401,Xử lý ảnh số và thị giác máy tính,3,Kỹ thuật dữ liệu
+DATA401,Khai phá dữ liệu,3,Kỹ thuật dữ liệu
+PROJ401,Đồ án chuyên ngành,3,
+OSRT401,Hệ điều hành thời gian thực,3,Khoa học máy tính
+ROBOT402,Thiết kế phần cứng và Robotics,3,Khoa học máy tính
+BI402,Hệ hỗ trợ ra quyết định,3,Hệ thống thông tin
+SEC402,Mật mã và an ninh mạng,3,An toàn thông tin
+NET402,Công nghệ .Net,3,Công nghệ thông tin
+INTER402,Thực tập tốt nghiệp,4,
+THESIS402,Luận văn tốt nghiệp,6,
+IT311,Quản trị hệ thống máy chủ,3,Công nghệ thông tin
+IT312,Lập trình hệ thống,3,Công nghệ thông tin
+IT313,Mạng máy tính nâng cao,3,Công nghệ thông tin
+IT314,Hạ tầng và dịch vụ mạng,3,Công nghệ thông tin
+IT321,Công nghệ ảo hóa,3,Công nghệ thông tin
+IT322,Quản trị hạ tầng công nghệ thông tin,3,Công nghệ thông tin
+IT323,Tích hợp hệ thống và API,3,Công nghệ thông tin
+IT324,Thiết kế mạng doanh nghiệp,3,Công nghệ thông tin
+IT411,DevOps và tích hợp triển khai liên tục,3,Công nghệ thông tin
+IT412,Kiến trúc hệ thống doanh nghiệp,3,Công nghệ thông tin
+IT413,Giám sát và vận hành dịch vụ công nghệ thông tin,3,Công nghệ thông tin
+IT421,Quản trị nền tảng đám mây,3,Công nghệ thông tin
+IT422,Quản lý dịch vụ công nghệ thông tin,3,Công nghệ thông tin
+IT423,Chuyên đề công nghệ thông tin,3,Công nghệ thông tin
+IS311,Phân tích và thiết kế hệ thống thông tin,3,Hệ thống thông tin
+IS312,Kho dữ liệu,3,Hệ thống thông tin
+IS313,Hệ quản trị cơ sở dữ liệu doanh nghiệp,3,Hệ thống thông tin
+IS314,Phân tích nghiệp vụ,3,Hệ thống thông tin
+IS321,Khai phá quy trình nghiệp vụ,3,Hệ thống thông tin
+IS322,Hệ thống hoạch định nguồn lực doanh nghiệp,3,Hệ thống thông tin
+IS323,Trực quan hóa dữ liệu,3,Hệ thống thông tin
+IS324,Tích hợp dữ liệu và hệ thống,3,Hệ thống thông tin
+IS411,Thiết kế hệ hỗ trợ quyết định,3,Hệ thống thông tin
+IS412,Quản lý dự án hệ thống thông tin,3,Hệ thống thông tin
+IS413,Kiểm toán hệ thống thông tin,3,Hệ thống thông tin
+IS421,Ứng dụng GIS trong quản lý,3,Hệ thống thông tin
+IS422,Phân tích nghiệp vụ nâng cao,3,Hệ thống thông tin
+IS423,Chuyên đề hệ thống thông tin,3,Hệ thống thông tin
+CS311,Phân tích thuật toán nâng cao,3,Khoa học máy tính
+CS312,Lý thuyết tính toán,3,Khoa học máy tính
+CS313,Lập trình song song,3,Khoa học máy tính
+CS314,Toán rời rạc nâng cao,3,Khoa học máy tính
+CS321,Trí tuệ nhân tạo nâng cao,3,Khoa học máy tính
+CS322,Đồ họa máy tính,3,Khoa học máy tính
+CS323,Các phương pháp tối ưu hóa,3,Khoa học máy tính
+CS324,Tính toán hiệu năng cao,3,Khoa học máy tính
+CS411,Mô phỏng hệ thống,3,Khoa học máy tính
+CS412,Tính toán phân tán,3,Khoa học máy tính
+CS413,Hệ thống thông minh,3,Khoa học máy tính
+CS421,Xử lý tín hiệu số,3,Khoa học máy tính
+CS422,Nhận dạng mẫu,3,Khoa học máy tính
+CS423,Chuyên đề khoa học máy tính,3,Khoa học máy tính
+SWE311,Kỹ nghệ yêu cầu phần mềm,3,Kỹ thuật phần mềm
+SWE312,Thiết kế kiến trúc phần mềm,3,Kỹ thuật phần mềm
+SWE313,Kiểm thử tự động,3,Kỹ thuật phần mềm
+SWE314,Mẫu thiết kế phần mềm,3,Kỹ thuật phần mềm
+SWE321,Phát triển phần mềm hướng dịch vụ,3,Kỹ thuật phần mềm
+SWE322,Thiết kế trải nghiệm người dùng,3,Kỹ thuật phần mềm
+SWE323,Phát triển ứng dụng doanh nghiệp,3,Kỹ thuật phần mềm
+SWE324,Tích hợp và triển khai phần mềm,3,Kỹ thuật phần mềm
+SWE411,Quản trị cấu hình phần mềm,3,Kỹ thuật phần mềm
+SWE412,Phát triển phần mềm theo Agile,3,Kỹ thuật phần mềm
+SWE413,Bảo mật ứng dụng,3,Kỹ thuật phần mềm
+SWE421,Đảm bảo chất lượng phần mềm nâng cao,3,Kỹ thuật phần mềm
+SWE422,Kiểm thử hiệu năng phần mềm,3,Kỹ thuật phần mềm
+SWE423,Chuyên đề kỹ thuật phần mềm,3,Kỹ thuật phần mềm
+SEC311,Mật mã học ứng dụng,3,An toàn thông tin
+SEC312,An toàn hệ điều hành,3,An toàn thông tin
+SEC313,Kiểm thử xâm nhập căn bản,3,An toàn thông tin
+SEC314,An toàn mạng máy tính,3,An toàn thông tin
+SEC321,Phân tích mã độc,3,An toàn thông tin
+SEC322,An toàn ứng dụng Web,3,An toàn thông tin
+SEC323,Điều tra số,3,An toàn thông tin
+SEC324,Bảo mật cơ sở dữ liệu,3,An toàn thông tin
+SEC411,Quản trị an ninh mạng,3,An toàn thông tin
+SEC412,An toàn điện toán đám mây,3,An toàn thông tin
+SEC413,Ứng cứu sự cố an toàn thông tin,3,An toàn thông tin
+SEC421,Quản trị rủi ro an toàn thông tin,3,An toàn thông tin
+SEC422,Kiểm thử xâm nhập nâng cao,3,An toàn thông tin
+SEC423,Chuyên đề an toàn thông tin,3,An toàn thông tin
+DE311,Lập trình Python cho dữ liệu,3,Kỹ thuật dữ liệu
+DE312,Xử lý và làm sạch dữ liệu,3,Kỹ thuật dữ liệu
+DE313,Thống kê ứng dụng cho dữ liệu,3,Kỹ thuật dữ liệu
+DE314,Thu thập và tích hợp dữ liệu,3,Kỹ thuật dữ liệu
+DE321,Thiết kế kho dữ liệu,3,Kỹ thuật dữ liệu
+DE322,Xử lý dữ liệu luồng,3,Kỹ thuật dữ liệu
+DE323,Học sâu ứng dụng,3,Kỹ thuật dữ liệu
+DE324,Phân tích dữ liệu đa chiều,3,Kỹ thuật dữ liệu
+DE411,MLOps và triển khai mô hình,3,Kỹ thuật dữ liệu
+DE412,Thiết kế đường ống dữ liệu,3,Kỹ thuật dữ liệu
+DE413,Phân tích dữ liệu thời gian thực,3,Kỹ thuật dữ liệu
+DE421,Công nghệ dữ liệu trên đám mây,3,Kỹ thuật dữ liệu
+DE422,Học tăng cường,3,Kỹ thuật dữ liệu
+DE423,Chuyên đề kỹ thuật dữ liệu,3,Kỹ thuật dữ liệu
