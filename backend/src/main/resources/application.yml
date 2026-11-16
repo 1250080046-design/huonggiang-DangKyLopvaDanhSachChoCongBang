@@ -1,0 +1,66 @@
+spring:
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 6MB
+  application:
+    name: he-thong-dang-ky-lop
+  datasource:
+    url: ${DB_URL:jdbc:sqlserver://localhost:1433;databaseName=HeThongDangKyLop;encrypt=true;trustServerCertificate=true}
+    username: ${DB_USERNAME:sa}
+    password: ${DB_PASSWORD:123}
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  jpa:
+    hibernate:
+      ddl-auto: ${DDL_AUTO:none}
+    open-in-view: false
+    properties:
+      hibernate:
+        physical_naming_strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        format_sql: true
+        jdbc:
+          time_zone: UTC
+  mail:
+    host: ${MAIL_HOST:localhost}
+    port: ${MAIL_PORT:1025}
+    username: ${MAIL_USERNAME:}
+    password: ${MAIL_PASSWORD:}
+    properties:
+      mail:
+        smtp:
+          auth: ${MAIL_SMTP_AUTH:false}
+          starttls.enable: ${MAIL_STARTTLS:false}
+server:
+  port: ${SERVER_PORT:8081}
+app:
+  jwt:
+    secret: ${JWT_SECRET:VjVJVV9tYktpcjB6OE9wV1M2eWhRZ3NpU2ZOV0N5dlRXbHhNdHhHcw==}
+    expiration-minutes: ${JWT_EXPIRATION_MINUTES:240}
+  cookie:
+    secure: ${COOKIE_SECURE:false}
+  frontend-url: ${FRONTEND_URL:http://localhost:3000}
+  mail:
+    enabled: ${APP_MAIL_ENABLED:false}
+  registration:
+    open-term: ${REGISTRATION_OPEN_TERM:Học kỳ 2}
+    open-year: ${REGISTRATION_OPEN_YEAR:2026-2027}
+    max-credits: ${REGISTRATION_MAX_CREDITS:24}
+  academic-data:
+    enabled: ${ACADEMIC_IMPORT_ENABLED:false}
+    path: ${ACADEMIC_DATA_DIR:../import-data}
+    archive-v8: ${ACADEMIC_ARCHIVE_LEGACY:false}
+  csv:
+    path: ${USERS_CSV_PATH:../import-data/users.csv}
+    enabled: ${USERS_CSV_ENABLED:true}
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: never
+logging:
+  level:
+    vn.edu.registration: INFO
+    org.hibernate.SQL: WARN
