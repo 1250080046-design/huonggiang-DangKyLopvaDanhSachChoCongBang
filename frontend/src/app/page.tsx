@@ -3,6 +3,7 @@ import { FormEvent, ReactNode, useCallback, useEffect, useRef, useState } from "
 import { createPortal } from "react-dom";
 import { api, API_URL, ClassView, RegistrationView, WaitlistView, LoginResponse, ConversationView, MessageView, ProfileView, StudySchedule } from "@/lib/api";
 import PasswordField from "@/components/PasswordField";
+import SchoolLogo from "@/components/SchoolLogo";
 import { getRegistrationWindowStatus, registrationWindowLabels } from "@/lib/registration-window";
 import { classStatusDescription, classStatusLabel } from "@/lib/class-status";
 type StudyProgressView = { status:"ON_TRACK"|"DELAYED"|"SUSPENDED"|"RETURNED"; effectiveYear:number|null; inferredYear:number; note:string|null; retakeCourseCodes:string[] };
@@ -1323,18 +1324,37 @@ export default function HomePage() {
       { id: "chat" as Tab, label: "Tin nhắn / hỗ trợ" }
     ] : [])
   ];
-  if (authChecking) return <main className="reference-login"><div className="reference-login-heading"><h1>Đang kiểm tra phiên đăng nhập...</h1></div></main>;
-  if (!token) return <main className="reference-login">
+  if (authChecking) return <main className="reference-login school-login"><div className="school-session-check" role="status"><SchoolLogo /><p>Đang kiểm tra phiên đăng nhập...</p></div></main>;
+  if (!token) return <main className="reference-login school-login">
     <ToastMessages error={error} notice={notice} onCloseError={() => setError("")} onCloseNotice={() => setNotice("")} />
-    <div className="reference-login-heading"><strong>CỔNG ĐÀO TẠO</strong><h1>Đăng ký lớp học phần</h1></div>
-    <form className="reference-login-form" onSubmit={signIn}>
-      <label>Email trường<input type="text" value={email} onChange={e=>setEmail(e.target.value)} placeholder="ten@truong.edu.vn" autoComplete="username" required /></label>
-      <PasswordField label="Mật khẩu" value={password} onChange={e=>setPassword(e.target.value)} autoComplete="current-password" required />
-      <button className="primary full" disabled={busy}>{busy ? "Đang đăng nhập..." : "Đăng nhập"}</button>
-    </form>
+    <div className="school-login-card">
+      <section className="school-login-intro" aria-labelledby="portal-title">
+        <header className="school-login-brand"><SchoolLogo /><div><strong>CỔNG ĐÀO TẠO</strong><span>Đăng ký học phần trực tuyến</span></div></header>
+        <div className="school-login-intro-copy">
+          <span className="school-login-eyebrow">SẴN SÀNG CHO HỌC KỲ MỚI</span>
+          <h1 id="portal-title">Chủ động kế hoạch.<br /><span>Vững bước học tập.</span></h1>
+          <p>Đăng ký học phần và theo dõi việc học của bạn trong cùng một nơi.</p>
+        </div>
+        <ul className="school-login-features">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 6c-3-2-6-2-9-1v14c3-1 6-1 9 1 3-2 6-2 9-1V5c-3-1-6-1-9 1Zm0 0v14" /></svg><span>Tìm và đăng ký học phần</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2" /><path d="M7 3v4m10-4v4M3 11h18m-13 5h2m4 0h2" /></svg><span>Theo dõi lịch học cá nhân</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></svg><span>Cập nhật danh sách chờ</span></li>
+        </ul>
+      </section>
+      <section className="school-login-form-panel" aria-labelledby="login-title">
+      <div className="reference-login-heading"><span className="school-login-eyebrow">TÀI KHOẢN ĐÀO TẠO</span><h2 id="login-title">Chào mừng trở lại</h2><p>Đăng nhập để tiếp tục đến cổng đào tạo.</p></div>
+      <form className="reference-login-form" onSubmit={signIn} aria-label="Đăng nhập cổng đào tạo" aria-busy={busy}>
+        <label htmlFor="school-email">Email trường<input id="school-email" name="email" type="email" value={email} onChange={e=>setEmail(e.target.value)} placeholder="ten@truong.edu.vn" autoComplete="username" autoCapitalize="none" spellCheck={false} required /></label>
+        <PasswordField label="Mật khẩu" name="password" value={password} onChange={e=>setPassword(e.target.value)} placeholder="Nhập mật khẩu của bạn" autoComplete="current-password" required />
+        <button className="primary full" disabled={busy} type="submit">{busy ? "Đang đăng nhập..." : "Đăng nhập"}</button>
+      </form>
+      <p className="school-login-support"><strong>Bạn cần hỗ trợ?</strong><span>Liên hệ phòng đào tạo để được hỗ trợ tài khoản.</span></p>
+      </section>
+    </div>
+    <footer className="school-login-footer">Hệ thống đăng ký lớp học phần <span aria-hidden="true">·</span> Cổng đào tạo trực tuyến</footer>
   </main>;
   const currentPageLabel = navItems.find(i => i.id === tab)?.label || (tab === "password" ? "Đổi mật khẩu" : "Tổng quan");
-  return <main className={`app-shell ${role === "ADMIN" ? "reference-admin" : "reference-portal"}`}><ToastMessages error={error} notice={notice} onCloseError={() => setError("")} onCloseNotice={() => setNotice("")} /><aside className="sidebar"><div className="sidebar-brand"><div><b>Đăng ký học phần</b><small>Cổng đào tạo</small></div></div>{role === "ADMIN" ? <div className="reference-sidebar-user"><b>Quản trị viên</b><span>Quản trị viên</span></div> : <div className="reference-sidebar-user"><b>{profile?.fullName || displayName}</b><span>{profileRoleLabel}</span></div>}<nav>{navItems.map(n => <button key={n.id} className={`nav-item ${tab === n.id ? "active" : ""}`} onClick={() => { closeAdminEditor(); setPersonDetail(null); setClassEditing(null); setTab(n.id); resetMessages(); }}>{n.label}{n.id === "waitlist" && studentWaitCount > 0 ? <span className="nav-count">{studentWaitCount}</span> : null}</button>)}</nav><div className="sidebar-bottom">{<button type="button" className="sidebar-signout" onClick={()=>setTab("password")}><span>Đổi mật khẩu</span></button>}<button type="button" className="sidebar-signout" onClick={signOut}><span>Đăng xuất</span></button></div></aside><section className="main-area"><header className="topbar topbar-with-title"><div className="topbar-page-heading"><h1>{currentPageLabel}</h1></div><div className="profile-area"><div className="profile-name"><b>{profile?.fullName || displayName}</b><small>{profileRoleLabel}</small></div></div></header><div className="content-area">
+  return <main className={`app-shell ${role === "ADMIN" ? "reference-admin" : "reference-portal"}`}><ToastMessages error={error} notice={notice} onCloseError={() => setError("")} onCloseNotice={() => setNotice("")} /><aside className="sidebar"><div className="sidebar-brand"><SchoolLogo /><div><b>Đăng ký học phần</b><small>Cổng đào tạo</small></div></div>{role === "ADMIN" ? <div className="reference-sidebar-user"><b>Quản trị viên</b><span>Quản trị viên</span></div> : <div className="reference-sidebar-user"><b>{profile?.fullName || displayName}</b><span>{profileRoleLabel}</span></div>}<nav>{navItems.map(n => <button key={n.id} className={`nav-item ${tab === n.id ? "active" : ""}`} onClick={() => { closeAdminEditor(); setPersonDetail(null); setClassEditing(null); setTab(n.id); resetMessages(); }}>{n.label}{n.id === "waitlist" && studentWaitCount > 0 ? <span className="nav-count">{studentWaitCount}</span> : null}</button>)}</nav><div className="sidebar-bottom">{<button type="button" className="sidebar-signout" onClick={()=>setTab("password")}><span>Đổi mật khẩu</span></button>}<button type="button" className="sidebar-signout" onClick={signOut}><span>Đăng xuất</span></button></div></aside><section className="main-area"><header className="topbar topbar-with-title"><div className="topbar-page-heading"><h1>{currentPageLabel}</h1></div><div className="profile-area"><div className="profile-name"><b>{profile?.fullName || displayName}</b><small>{profileRoleLabel}</small></div></div></header><div className="content-area">
 
     {tab === "overview" && role === "STUDENT" && <>
       
